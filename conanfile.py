@@ -15,7 +15,7 @@ class Gl3wConan(ConanFile):
 
     def source(self):
         tools.download("https://github.com/skaslev/gl3w/raw/master/gl3w_gen.py", "gl3w_downloader/gl3w_gen.py")
-        self.run("python gl3w_downloader/gl3w_gen.py gl3w")
+        self.run("python gl3w_downloader/gl3w_gen.py --root gl3w")
 
     def build(self):
         cmake = CMake(self)
